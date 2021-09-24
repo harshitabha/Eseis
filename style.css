@@ -1,3 +1,28 @@
-.px-2 {
-    padding: ($spacer * .5) !important;
-  }
+html {
+  box-sizing:border-box;
+}
+
+*,* before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: "Roboto", "Helvetica Neue", 'Lucida Grande', sans-sherif;
+}
+
+/* create the gradient for the background*/
+.gradientConts{
+  background: linear-gradient (to right, #12c2e9, #c471ed, #f64f59);
+  width: 100%;
+  height: 300px;
+}
+
+.mainCont {
+  width:1000px;
+  margin: 0 auto;
+}
+
+.mainCont h2{
+  width: 1000px;
+  margin: 0 auto;
+}
