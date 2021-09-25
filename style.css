@@ -11,7 +11,7 @@ body{
 }
 
 /* create the gradient for the background*/
-.gradientConts{
+.gradientCont{
   background: linear-gradient (to right, #12c2e9, #c471ed, #f64f59);
   width: 100%;
   height: 300px;
@@ -89,4 +89,63 @@ body{
   font-size: 14px;
   outline:none;
   font-family: 'Roboto Mono' monospace;
+}
+
+@-webkit-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1 ;}
+}
+
+@-moz-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1 ;}
+}
+
+@-o-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1 ;}
+}
+
+@keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1 ;}
+}
+
+@-webkit-keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1 ;}
+}
+
+@-o-keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1 ;}
+}
+
+@keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1 ;}
+}
+
+@media screen and (max-width: 1000px){
+  .gradientCont{
+    height: 220px;
+  }
+  .mainCont{
+    width: 100%;
+    padding: 0 12 px;
+  }
+
+  .mainCont h2{
+    font-size: 32px;
+    margin: 40px 0 0 0;
+  }
+
+  .mainCont h3{
+    font-size: 16px;
+    margin: 0 0 40px 0;
+  }
+
+  .terminalResultCont{
+    height: 100px;
+  }
 }
