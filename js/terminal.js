@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
         var helpKeyWords = [ // ADD HERE
             "- c + your code",
             "- 'Time' will display the current time",
-            "- 'Date' will display the current date"
+            "- 'Date' will display the current date",
+            "* There are more keywords to discover."
         ].join('<br>');
+        addTextToResults(helpKeyWords); // stopped at 6:26
     }
 })

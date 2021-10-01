@@ -7,19 +7,14 @@ html {
 }
 
 body{
-  font-family: "Roboto", "Helvetica Neue", 'Lucida Grande', sans-sherif;
 }
 
 /* create the gradient for the background*/
 .gradientCont{
-  background: linear-gradient (to right, #12c2e9, #c471ed, #f64f59);
+  background-image: linear-gradient(to right, #12c2e9, #c471ed,  #f64f59);
   width: 100%;
   height: 300px;
-}
-
-.mainCont {
-  width:1000px;
-  margin: 0 auto;
+  /*font-family: "Roboto", "Helvetica Neue", 'Lucida Grande', sans-sherif;*/
 }
 
 .mainCont h2{
@@ -45,13 +40,14 @@ body{
 }
 
 .terminalCont{
-  background:black;
+  background-color: black;
+  color: azure;
   width: 100%;
+  height: 300px;
   border-radius: 4px;
-  padding: 12px 0 0 0 ;
-  margin-top: -20px;
+  padding: 12px 12px 12px 12px ;
+  margin-top: -20px;    
   font-family: 'Roboto Mono' monospace;
-  opacity: 0;
   animation: 
   slideDownAnimation 1s eas-in-out 1s forwards,
   fadeAnimation 0.8s ease-in-out 1s forwards;
@@ -76,9 +72,13 @@ body{
   display: block;
   color: rgb(255, 255, 255, 0.5);
 }
-
+#terminalResultCont a{
+  color: rgb(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+/* For some reason this is all that shows up right now*/
 #terminalTextInput {
-  background: black;
+  background: rgb(0, 0, 0);
   display: block;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -93,37 +93,37 @@ body{
 
 @-webkit-keyframes fadeAnimation {
   0% {opacity:0;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @-moz-keyframes fadeAnimation {
   0% {opacity:0;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @-o-keyframes fadeAnimation {
   0% {opacity:0;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @keyframes fadeAnimation {
   0% {opacity:0;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @-webkit-keyframes slideAnimation {
   0% {opacity:20px;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @-o-keyframes slideAnimation {
   0% {opacity:20px;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @keyframes slideAnimation {
   0% {opacity:20px;}
-  100% {opacity:1 ;}
+  100% {opacity:1;}
 }
 
 @media screen and (max-width: 1000px){
