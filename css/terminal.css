@@ -1,3 +1,6 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 /*CSS for the main body of the website specfically anything relating to the terminal**/
 
 html {
@@ -13,7 +16,6 @@ html {
     background-image: linear-gradient(to right, #12c2e9, #c471ed,  #f64f59);
     width: 100%;
     height: 300px;
-    /*font-family: "Roboto", "Helvetica Neue", 'Lucida Grande', sans-sherif;*/
   }
   
   .mainCont h2{
@@ -21,7 +23,8 @@ html {
     width: 100%;
     text-align: center;
     font-weight: 300;
-    font-size: 48px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 52px;
     margin: 60px 0 0;
     color: white;
     opacity: 0;
@@ -31,7 +34,8 @@ html {
   .mainCont h3{
     text-align: center;
     font-weight: 100%;
-    font-size: 18px;
+    font-size: 26px;
+    font-family: 'Dancing Script', cursive;
     color: rgb(255, 255, 255, 0.75);
     margin: 0 0 60px 0;
     opacity: 0;

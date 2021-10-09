@@ -2,7 +2,13 @@
   margin-right: 5px;
 }
 
+/*Mske the background of nav buttons change on hover*/
 nav ul li a:hover {
   background-color: #12c2e9 !important;
   color: white !important;
+}
+
+.active {
+  color: black ;
+  background-color: #12c2e9 !important;
 }
