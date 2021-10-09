@@ -1,0 +1,8 @@
+#bookIcon {
+  margin-right: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #12c2e9 !important;
+  color: white !important;
+}
