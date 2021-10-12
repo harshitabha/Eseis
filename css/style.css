@@ -9,6 +9,5 @@ nav ul li a:hover {
 }
 
 .active {
-  color: black ;
   background-color: #12c2e9 !important;
 }
