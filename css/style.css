@@ -4,7 +4,7 @@
 
 /*Mske the background of nav buttons change on hover*/
 nav ul li a:hover {
-  background-color: #12c2e9 !important;
+  background-color: #c471ed !important;
   color: white !important;
 }
 
