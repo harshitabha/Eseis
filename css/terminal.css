@@ -1,5 +1,5 @@
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
 
 /*CSS for the main body of the website specfically anything relating to the terminal**/
 
@@ -23,8 +23,8 @@ html {
     width: 100%;
     text-align: center;
     font-weight: 300;
-    font-family: 'Dancing Script', cursive;
-    font-size: 52px;
+    font-family: 'Charm', cursive;
+    font-size: 70px;
     margin: 60px 0 0;
     color: white;
     opacity: 0;
@@ -34,8 +34,8 @@ html {
   .mainCont h3{
     text-align: center;
     font-weight: 100%;
-    font-size: 26px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    font-family: 'Charm', cursive;
     color: rgb(255, 255, 255, 0.75);
     margin: 0 0 60px 0;
     opacity: 0;
@@ -51,9 +51,7 @@ html {
     padding: 12px 12px 12px 12px ;
     margin-top: -20px;    
     font-family: 'Roboto Mono' monospace;
-    animation: 
-    slideDownAnimation 1s eas-in-out 1s forwards,
-    fadeAnimation 0.8s ease-in-out 1s forwards;
+    
   }
   
   .userEnteredText{

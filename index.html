@@ -1,4 +1,6 @@
-
+ <!DOCTYPE html>
+ <html lang="en"> 
+  <head>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
     
@@ -75,17 +77,16 @@
     <div class="gradientCont mainCont mt-4">
       <div class="mainCont">
         <h2 class="welcome">Welcome to Eseis...</h2>
-        <h3 class="welcome">Get Started by Typing 'start' below</h3>
+        <h3 class="welcome">Get Started By Typing <em>'START'</em> Below</h3>
       </div>
       
-      <div class="container">
-        <div class="terminalCont">
-          
-        </div>
-      
-        <form>
-          <input id="terminalTextInput" type="text" placeholder="Type 'HELP' if you are stuck..." autocomplete="off">
-        </form>
+      <div class="container terminalCont">
+          <div id="terminalResultsCont">
+          </div>
+
+          <form>
+            <input id="terminalTextInput" type="text" placeholder="Type 'HELP' if you are stuck..." autocomplete="off">
+          </form>
       </div>
 
     </div>
@@ -99,3 +100,6 @@
     <script src="./js/script.js"></script>
     
     <script src="./js/terminal.js"></script>
+    </body>
+  </html>
+    
