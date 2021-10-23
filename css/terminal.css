@@ -53,10 +53,6 @@ html {
     font-family: 'Roboto Mono' monospace;
     
   }
-  #terminalResultsCont {
-    animation: slideDownAnimation 1s eas-in-out 1s forwards,
-      fadeAnimation 0.8s ease-in-out 1s forwards;
-  }
   
   .userEnteredText{
     color: rbg(255, 255, 255, 0.5);
