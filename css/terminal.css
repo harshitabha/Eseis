@@ -70,7 +70,7 @@ html {
     border: none;
     font-size: 14px;
     line-height: 28px;
-    display: block;
+    display: inline-block;
     color: rgb(255, 255, 255, 0.5);
   }
   /* For some reason this is all that shows up right now*/
