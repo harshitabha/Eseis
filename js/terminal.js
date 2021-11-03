@@ -113,12 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 clearInput();
                 addTextToResults("Hello, I am your assistant... I am based on pure JS.");
                 break;
-            
-            case "what":
-                clearInput();
-                addTextToResults("Please type 'help' to get support");
-                break;
-
 
             // replies
             case "youtube":
@@ -143,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             case "help":
             case "?":
+            case "what":
                 clearInput();
                 postHelpList();
                 break;
