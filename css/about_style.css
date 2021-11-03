@@ -1,27 +1,20 @@
-#bookIcon {
-  margin-right: 5px;
-}
-
-/*Mske the background of nav buttons change on hover*/
-nav ul li a:hover {
-  background-color: #c471ed !important;
-  color: white !important;
-}
-
-.active {
-  background-color: #12c2e9 !important;
-}
-.active:hover {
-  background-color: #12c2e9 !important;
-}
-
-.footer {
-  height: auto;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-}
+@import url(./colors.css);
 
 body {
   padding-top: 100px;
+}
+.card{
+  flex-direction: row;
+  align-items:center;
+  transition: all .5s ease-in-out;
+}
+
+.card-img-top {
+  width: 250px;
+  height: fit-content;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: var(--card_hover);
 }

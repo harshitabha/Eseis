@@ -1,6 +1,9 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
 
+/*other imports*/
+@import url(./colors.css);
+
 /*CSS for the main body of the website specfically anything relating to the terminal**/
 
 body {
@@ -13,7 +16,7 @@ body {
   
 /* create the gradient for the background*/
 .gradientCont{
-  background-image: linear-gradient(to right, #12c2e9, #c471ed,  #f64f59);
+  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
   width: 100%;
   height: 300px;
 }
