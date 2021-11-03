@@ -1,2 +1,2 @@
 ## Eseis
-Choose your own adventure on Eseis
+Follow Vesper as they discover the mystery behind their mother.
