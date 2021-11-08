@@ -94,12 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 clearInput();
                 addTextToResults("Harshita Bhardwaj and Gerald Kyro Tungol");
                 break;
-            case "I love you":
-            case "love you":
-            case "love":
-                clearInput();
-                addTextToResults("Great this works 💖");
-                break;
             
             case "web dev":
             case "web development":
@@ -142,6 +136,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 postHelpList();
                 break;
 
+            case "start":
+                clearInput();
+                addTextToResults("Your adventure will begin how");
+                //need to make it so this can only happen once
+                break;
             default:
                 clearInput();
                 addTextToResults("<p><i><b>Please wait untill you are prompted to make a choice</b></p>");

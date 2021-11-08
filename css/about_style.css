@@ -18,3 +18,7 @@ body {
   transform: scale(1.05);
   background-color: var(--card_hover);
 }
+
+.pWeb {
+  background-color: var(--main_blue);
+}
