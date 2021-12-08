@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollToBottomOfResults();
 
     //add text to the results div
-    var addTextToResults = function(textToAdd) {
+    var add = function(textToAdd) {
         document.getElementById('terminalResultsCont').innerHTML += "<p>" + textToAdd + "</p>";
         scrollToBottomOfResults();
     }
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "- 'Date' will display the current date",
             "* There are more keywords to discover."
         ].join('<br>');
-        addTextToResults(helpKeyWords); // stopped at 6:26
+        add(helpKeyWords); // stopped at 6:26
     }
 
     // Getting the time and date and post it depending on what you request
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function() {
         //positing the right info to the div
         if(postTimeDay == "time")
         {
-            addTextToResults(currentTime);
+            add(currentTime);
         } else if(postTimeDay == "date") {
-            addTextToResults(currentDate);
+            add(currentDate);
         }
     }
 
@@ -88,35 +88,35 @@ document.addEventListener("DOMContentLoaded", function() {
             //replies
             case "code":
                 clearInput();
-                addTextToResults("Get web elements source code at <a target='_blank' href='https://www.webfx.com/web-design/random-color-picker/'");
+                add("Get web elements source code at <a target='_blank' href='https://www.webfx.com/web-design/random-color-picker/'");
                 break;
             case "founders":
                 clearInput();
-                addTextToResults("Harshita Bhardwaj and Gerald Kyro Tungol");
+                add("Harshita Bhardwaj and Gerald Kyro Tungol");
                 break;
             
             case "web dev":
             case "web development":
                 clearInput();
-                addTextToResults("Check out this resource!");
+                add("Check out this resource!");
                 openLinkInNewWindow("https://www.w3schools.com/");    
                 
             case "hello":
             case "hi":
             case "hola":
                 clearInput();
-                addTextToResults("Hello, I am your assistant... I am based on pure JS.");
+                add("Hello, I am your assistant... I am based on pure JS.");
                 break;
 
             // replies
             case "youtube":
                 clearInput();
-                addTextToResults("Type youtube + something to search for.");
+                add("Type youtube + something to search for.");
                 break;
 
             case "google":
                 clearInput();
-                addTextToResults("Type google + something to search for.");
+                add("Type google + something to search for.");
                 break;
 
             case "time":
@@ -138,12 +138,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             case "start":
                 clearInput();
-                addTextToResults("Your adventure will begin how");
+                add("Your adventure will begin how");
                 //need to make it so this can only happen once
                 break;
             default:
                 clearInput();
-                addTextToResults("<p><i><b>Please wait untill you are prompted to make a choice</b></p>");
+                add("<p><i><b>Please wait untill you are prompted to make a choice</b></p>");
                 break;
         }
     }
@@ -156,18 +156,18 @@ document.addEventListener("DOMContentLoaded", function() {
         //only if something was entered
         if(textInputValueLowerCase != "")
         {
-            addTextToResults("<p class='userEnteredText'> " + textInputVal + "</p>");
+            add("<p class='userEnteredText'> " + textInputVal + "</p>");
             if(textInputValueLowerCase.substr(0,5) == "open "){ //if the user is asking to open a website
                 openLinkInNewWindow('https://' + textInputValueLowerCase.substr(5));
-                addTextToResults("<i>The URL " + "<b>" + textInputVal.substr(5) + "</b>" + " should be open </i>");
+                add("<i>The URL " + "<b>" + textInputVal.substr(5) + "</b>" + " should be open </i>");
             }
             else if(textInputValueLowerCase.substr(0,8) == "youtube "){
                 openLinkInNewWindow('https://www.youtube.com/results?search_query=' + textInputValueLowerCase.substr(8));
-                addTextToResults("<i>Youtube has been searched for " + "<b>" + textInputVal.substr(8) + "</b>" + "</i>");
+                add("<i>Youtube has been searched for " + "<b>" + textInputVal.substr(8) + "</b>" + "</i>");
             }
             else if(textInputValueLowerCase.substr(0,7) == "google "){
                 openLinkInNewWindow('https://www.google.com/search?query=' + textInputValueLowerCase.substr(7));
-                addTextToResults("<i>Google has been searched for " + "<b>" + textInputVal.substr(7) + "</b>" + "</i>");
+                add("<i>Google has been searched for " + "<b>" + textInputVal.substr(7) + "</b>" + "</i>");
             }
             else{
                 textReplies();
