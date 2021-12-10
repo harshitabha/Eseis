@@ -1,27 +1,36 @@
+@import url(./colors.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /*notmal text font*/
+
+body{
+  width: 100%;
+  height: auto;
+  
+  font-family: 'Roboto', sans-serif;
+}
 #bookIcon {
   margin-right: 5px;
 }
 
 /*Mske the background of nav buttons change on hover*/
 nav ul li a:hover {
-  background-color: #c471ed !important;
+  background-color: var(--main_purple) !important;
   color: white !important;
+}
+nav ul li a{
+  
 }
 
 .active {
-  background-color: #12c2e9 !important;
+  background-color: var(--main_blue) !important;
 }
 .active:hover {
-  background-color: #12c2e9 !important;
+  background-color: var(--main_blue) !important;
 }
 
 .footer {
   height: auto;
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 0px;
-}
-
-body {
-  padding-top: 100px;
 }

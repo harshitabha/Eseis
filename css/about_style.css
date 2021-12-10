@@ -1,27 +1,72 @@
-#bookIcon {
-  margin-right: 5px;
-}
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap'); /*heading/special label font*/
 
-/*Mske the background of nav buttons change on hover*/
-nav ul li a:hover {
-  background-color: #c471ed !important;
-  color: white !important;
-}
+@import url(./colors.css);
 
-.active {
-  background-color: #12c2e9 !important;
+/* 1em = 12pt = 16px = 100% */
+/* 1 rem = 16px */
+/* Large devices (desktops, 992px and up) 
+ * Default
+ */
+@media (min-width: 992px) { 
+  .card-text {font-size:2.5rem;} /*1rem = 16px*/
 }
-.active:hover {
-  background-color: #12c2e9 !important;
-}
-
-.footer {
-  height: auto;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-}
-
 body {
   padding-top: 100px;
+  
+  /* font-family: 'Roboto', sans-serif; */
+}
+.card{
+  flex-direction: row;
+  align-items:center;
+  transition: all .5s ease-in-out;
+}
+
+.about-img {
+  width: 250px;
+  height: fit-content;
+  border-radius: 50%;
+}
+.card-img{
+  height: 250px;
+  width: fit-content;
+}
+.card{
+  margin-bottom: 3em;
+}
+
+.card-title {
+  font-size: 48px; /*From UI Material Design*/
+
+  /* making the title text a gradient color */
+  background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 15px;
+  font-family: 'Charm', cursive;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
+/* sizes based on the size of the screen */
+/* Small devices (landscape phones, 544px and up) */
+@media (max-width: 544px) {  
+  .card-text {font-size:16px;} /*1rem = 16px*/
+  .card-title{font-size: 29px;}
+  .card-img {
+    height: 150px;
+    width: fit-content;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {  
+  .card-text {font-size:18px;} /*1rem = 16px*/
+  .card-title{font-size: 40px;}
+  .card-img {
+    height: 200px;
+    width: fit-content;
+  }
 }
