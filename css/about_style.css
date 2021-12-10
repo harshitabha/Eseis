@@ -37,7 +37,8 @@ body {
 
 .card-title {
   font-size: 48px; /*From UI Material Design*/
-  /* height:; */
+
+  /* making the title text a gradient color */
   background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
