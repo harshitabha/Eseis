@@ -34,6 +34,11 @@ body {
   animation: fadeAnimation 1s ease-in-out 0s forwards;
 }
 
+/* Changing the way differnt types of text appears in the terminal
+check js file for key */
+.dir {  color: var(--terminal_salmon); }
+.story { color: var(--terminal_blue);}
+
 .mainCont h3{
   text-align: center;
   font-weight: 100%;

@@ -5,12 +5,13 @@
 body{
   /* width: 100%;
   height: auto;  */
-  padding-bottom: 50px;
   
   font-family: 'Roboto', sans-serif;
 }
-#bookIcon {
-  margin-right: 5px;
+
+/* home icon */
+#bookIcon { 
+  margin-right: 10px;
 }
 
 /*Mske the background of nav buttons change on hover*/
@@ -18,14 +19,27 @@ nav ul li a:hover {
   background-color: var(--main_purple) !important;
   color: white !important;
 }
+ /* trying to center the name */
+.home {
+  font-size: 36px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
+/* changing the active nav button bg color */
 .active {
   background-color: var(--main_blue) !important;
 }
+
+/* keep the bg color of the active page */
 .active:hover {
   background-color: var(--main_blue) !important;
 }
 
+/* spacer for the bottom */
 .footer {
   height: auto;
   position: relative;
