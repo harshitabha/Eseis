@@ -1,4 +1,7 @@
 // import {story} from "terminal.js";
+const TERM_BLUE = "#95e5f7";
+const TERM_PURPLE = "#d39af0";
+const TERM_SAL = "#f76f78";
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -34,13 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //add text to the results div
     var add = function(textToAdd, type = "") {
-        if(type=="story") 
+        if(type=="story") // if output is related to the story
         {
-            document.getElementById('terminalResultsCont').innerHTML += "<p class='story'>" + textToAdd + "</p>";
-            document.getElementsByClassName("story").style.color = "";
+            document.getElementById('terminalResultsCont').innerHTML += "<p id='story'>" + textToAdd + "</p>";
+            document.getElementById("story").style.color = TERM_BLUE;
+        }
+        else if(type=="dir") // if the output in the terminal are instructions
+        {
+            document.getElementById('terminalResultsCont').innerHTML += "<p id='dir'>" + textToAdd + "</p>";
+            document.getElementById("dir").style.color = TERM_SAL;
         }
 
-        document.getElementById('terminalResultsCont').innerHTML += "<p>" + textToAdd + "</p>";        
+        else document.getElementById('terminalResultsCont').innerHTML += "<p>" + textToAdd + "</p>";        
         scrollToBottomOfResults();
     }
 
@@ -152,16 +160,25 @@ document.addEventListener("DOMContentLoaded", function() {
             
             case "CLEAR":
                 clearInput();
-                add("WARNING! This is a permanant action and can't be undone. Do you wish to continue? y/n");
-                textInputVal = document.getElementById('terminalTextInput').value.trim(); // get the text entered
-                clearTerminal();
+                add("WARNING! This is a permanant action and can't be undone. Do you wish to continue? y/n", "dir");
+
+                newChoice();
+
+                // while loop makes sure only y or n is typed and prompts them to choose again if they didn't
+                while(textInputVal != "y" || textInputVal != "n") 
+                {
+                    add("Please type y or n to make your choice", "dir");
+                    newChoice();
+                }
+
+                if(textInputVal=="y") clearTerminal();
+                else add("Action cancelled", "dir");
                 break;
 
             case "START":
                 clearInput();
                 add("Your adventure will begin now");
-                story();
-                //need to make it so this can only happen once
+                story(); // the story
                 break;
 
             default:
@@ -170,6 +187,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
         }
     }
+
+    // this function will take in a new response from the user
+    var newChoice = function() {
+        textInputVal = document.getElementById('terminalTextInput').value.trim(); // get the text entered
+        clearInput();
+    };
 
     // Main function to check the entered text and assign it to the correct function
     var checkWord = function() {
@@ -218,17 +241,17 @@ document.addEventListener("DOMContentLoaded", function() {
             add("Waiting cautiously in the room, a couple thoughts pass Vesper’s head. Who were those people? Were they enemies? \
             They didn\’t look armed. Maybe they were invaders. But then the villagers would have sounded the alarm. Maybe they were taken out?\
             Or maybe they just weren\’t awake yet? No they would\’ve been awake. As time passed, Vesper did not hear much movement after the door\
-            had been knocked on. The last thought had passed them. What if father had come back? When that thought hit them");//A
+            had been knocked on. The last thought had passed them. What if father had come back? When that thought hit them", "story");//A
             if(choicea) //stay back again
             {
                 add("Vesper stays back and waits. It shouldn\’t be father, he’s been out for 3 weeks already. He would have sent a notice back. And thus, Vesper proceeded\
                 along with the rest of the day, refusing to go outside in case of danger. Near the evening Vesper heard a knock on the front door. Opening it they discovered\
-                two villagers asking if Vesper could join the funeral they were going to hold tomorrow.");//AA
+                two villagers asking if Vesper could join the funeral they were going to hold tomorrow.", "story");//AA
                 if(choicea) //for who?
                 {
                     add("\“For who?\” Vesper asks. The other villagers\' expressions changed considerably, first from disbelief, to questioning, and finally cold. \“Ah. I see. Sorry to\
                         bother you.\” said the further villager as they turned to walk away. And so Vesper lived their whole life indoors only coming outside occasionally to buy food. After\
-                        a while they found out that their father had died, spending time to atone for their own self pity. \nWorld End. Restart?");//AAA
+                        a while they found out that their father had died, spending time to atone for their own self pity. \nWorld End. Restart?", "story");//AAA
                 }
                 else if(choiceb) //No.
                 {
@@ -236,24 +259,24 @@ document.addEventListener("DOMContentLoaded", function() {
                     The villagers\’ expressions changed. The furthest villager started to say \“Should have known you were a coldhearted bastard\” \
                     And with the villagers turned and left. Vesper stood in confusion and wonder. A bit later, they overheard conversation from the village.\
                     \¨Did you hear? The sir in the village died outside\¨ After hearing that the young Vesper broke down in tears. \¨He even died in front of the house\
-                    but his child did not open the door.\¨ Vesper cried even harder.\nA month later Vesper stood behind the front door.");//AAB
+                    but his child did not open the door.\¨ Vesper cried even harder.\nA month later Vesper stood behind the front door.", "story");//AAB
                     if(choicea) //Open the door.
                     {
                         add("Vesper proceeded to reach for the handle… and open the door once more. The day after their father\’s death, Vesper had gone to the funeral to apologize\
                         to the whole village, especially their dead father. Following that they paid their due respect and went back home to recover. Some villagers left some consolation gifts at the door, which\
                         were mostly food, but showed their support for the now truly lonely Vesper. The villagers welcomed Vesper as they left the house, sparking a warm and friendly\
-                        environment.\n The peaceful ending.\n World End. Restart?");//AABA
+                        environment.\n The peaceful ending.\n World End. Restart?", "story");//AABA
                     }
                     else if(choiceb) //Wait.
                     {
                         add("Vesper proceeded to reach for the handle… but hesitated. Maybe it was that hesitation that broke down their courage and \
                         prevented them from going out for the following three weeks. Vesper continued to live alone until their food supply was close to gone. \
-                        They had to make a choice.");//AABB
+                        They had to make a choice.", "story");//AABB
                         if(choicea)//Leave the Village
                         {
                             add("Vesper decides to leave the village. The front door of the house was finally opened… but the house was empty.\
                             Vesper had left the village secretly in the nighttime so that no one could spot them. The villagers decided to leave the\
-                            house as to avoid conflict in case Vesper came back in the future. Which they later did but that’s another story.\nWorld End. Restart?");//AABBA
+                            house as to avoid conflict in case Vesper came back in the future. Which they later did but that’s another story.\nWorld End. Restart?", "story");//AABBA
                         }
                         else if(choiceb)//Explore the house
                         {
@@ -262,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             Then Vesper headed towards the office. Here there were drawers, cabinets, and boxes that might contain things. Vesper\’s eyes locked onto a \
                             strange box on a shelf. Taking it out and opening it, Vesper changed from curiosity to shock… Then to sadness. Until now, Vesper realized that \
                             they\’ve never paid respects to their late father at all. However, their mother was still alive. Vesper made up their mind to go out and \
-                            adventure the world.\nLeaving in good heart!\n World End. Restart?");//AABBB
+                            adventure the world.\nLeaving in good heart!\n World End. Restart?", "story");//AABBB
                         }
                     }
                 }
@@ -272,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 regret. Vesper’s father was kneeling in front of the door. A rhythmic dripping sound could be heard and villagers could be seen gathering\
                 around the house. Vesper looked at the kneeling figure who struggled to open his eyes. Vesper watched in horror while some villagers looked\
                 away sadly and continued and others helped carry Vesper’s father away. In their regret Vesper wallowed in self-hate,\
-                eventually dying three days later.\n World End. Restart?");//AB
+                eventually dying three days later.\n World End. Restart?", "story");//AB
             }
             }
             else if(choiceb)//Run to the Door
@@ -281,20 +304,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 Vesper’s father was kneeling in front of the door. A rhythmic dripping sound could be heard and villagers could be seen \
                 gathering around the house. Vesper looked at the kneeling figure who struggled to open his eyes. Watching in horror, Vesper saw \
                 their father hold three fingers in his hand before going limp. Some villagers looked away sadly and continued while others\
-                helped carry Vesper’s father away.");//B
+                helped carry Vesper’s father away.", "story");//B
                 if(choicea)//
                 {
                     add("Spirit +2.\
                     Vesper\’s blood became cold and chilly when they noticed disapproving looks in the villagers\’ eyes.\
                     I… let my father die. It was all me. Rage started to build in Vesper and soon they found themselves\
-                    running into their room in a mad rage. Soon they regained consciousness… \
-                    ");//BA
+                    running into their room in a mad rage. Soon they regained consciousness… ", "story");//BA
                     if(choicea)//
                     {
                         add("In the forest. There lay a bunch of broken trees, branches, and scattered leaves everywhere. \
                         The ground also had many holes in it and adrenaline seemed to pump through their body. Confused at the \
-                        situation, Vesper decides to…\
-                        ");//BAA
+                        situation, Vesper decides to…" , "story");//BAA
                         if(choicea)//
                         {
                             add("Vesper thinks about what happened. In the rage, they had seemingly jumped up through the house,\
@@ -304,14 +325,14 @@ document.addEventListener("DOMContentLoaded", function() {
                             skin. \“AARGHH!\” The villagers, seemingly scared by the scream, still continued to hack away at Vesper, until\
                             they lay on the ground. A voice seemed to say, \“too bad, you weren\’t that interesting after allll...\”\
                             World End. Restart?\
-                            ");//BAAA END
+                            ", "story");//BAAA END
                         }
                         else if(choiceb)//
                         {
                             add("Vesper looks for where they might’ve come from. They decided to follow the direction of the broken \
                             branches from where they woke up. However, whispers were soon heard, and Vesper could, somehow, hear them very\
                             clearly. “The monster is on the move! What’s next?” “Follow for now. Wait till the others come.” \
-                            ");//BAAB
+                            ", "story");//BAAB
                             if(choicea)//
                             {
                                 add("Vesper walks up to them to ask what the monster is and where. However, when they approached,\
@@ -322,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 back through the trees. \“What?\” The other villagers seeing the opportunity, send him into the darkness with\
                                 another attack. Broken from the shock, Vesper started using his newfound strength to blindly lash out at the\
                                 villagers until pure silence ensued. Thus Vesper wandered as a blind creature until they hungered and died.\
-                                ");//BAABA End
+                                ", "story");//BAABA End
                             }
                             else if(choiceb)//
                             {
@@ -335,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 did have an encounter with another being, leading to another series of difficult choices, but that\
                                 is for another story.\
                                     World End. Restart?\
-                                ");//BAABB End
+                                ", "story");//BAABB End
                             }
                         }
                     }
@@ -344,13 +365,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         add("In the room. The room looked like a hurricane. Objects lay everywhere, the bed was overturned, and\
                         holes were punched in everywhere on the floor and walls. Huge cracks in the walls made the room seem to collapse. \
                         There seemed to be a blood trail leading out the window. There was also a glint of light from a hole in the wall.\
-                        ");//BAB
+                        ", "story");//BAB
                         if(choicea)//
                         {
                             add("Carefully heading past the window shards, Vesper heads into the forest following the trail. The forest \
                             reeked of silence but Vesper was too focused on the blood trail to notice. Vesper found it harder and harder to \
                             see the blood trail until they reached the end.  A chilling voice whispered in their ear.\
-                            ");//BABA
+                            ", "story");//BABA
                             if(choicea)//
                             {
                                 add("\“Who are you?\”  Vesper asks. \
@@ -358,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 \“Show yourself! Let me see who you are\”\
                                 \“So concerned with others, aren’t you? You should be more aware of your own self. Who you are and, whatt… you are.\”\
                                 You quickly scan the surrounding area. Although a voice was heard, nothing seemed to have changed.\
-                                ");//BABAA
+                                ", "story");//BABAA
                                 if(choicea)//
                                 {
                                     add("You run back towards the village. The eerie voice behind you fades away with one last message, \“\
@@ -370,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     A light sparks\
                                     then you are run over by the angry mob.\
                                     World End. Restart?\
-                                    ");//BABAAA End
+                                    ", "story");//BABAAA End
                                 }
                                 else if(choiceb)//
                                 {
@@ -380,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     The world, or at least your world, had been driven to pure darkness.\
                                     In the darkness, you see a blinking light.\
                                     World End. Restart?\
-                                    ");//BABAAB End
+                                    ", "story");//BABAAB End
                                 }
                             }
                             else if(choiceb)//
@@ -389,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 and panic, Vesper had run straight toward the voice. They felt lightheaded and the world seemed to break off from reality. \“\
                                 Poor fellow, running through dimensions, you’re bound to be shredded.\” Soon the world was silent.\
                                 World End. Restart?\
-                                ");//BABAB
+                                ", "story");//BABAB
                             }
                         }
                         else if(choiceb)//
@@ -401,7 +422,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             or at me for leaving you. There may not be anything I can say to relieve that. I would only wish that you someday are able to let \
                             this become your strength.  \nIf everything has happened as predicted, then there is nothing holding you back. You can choose to stay \
                             here if you wish, or you can choose to go into the world and find your purpose. And finally, know that you are never alone, for your \
-                            mother is still somewhere in this world, and that I am with you in spirit. Signed, Caland Milcloud\”");//BABB
+                            mother is still somewhere in this world, and that I am with you in spirit. Signed, Caland Milcloud\”", "story");//BABB
                             if(choicea)//
                             {
                                 add("Vesper, not wanting to relent to sadness, crushes the paper in their hand before throwing it to the ground \
@@ -409,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 the hell did you go!” Five minutes later… “You godda-” Ten minutes later. Vesper tired of the anger and ranting, fell \
                                 to the ground tired. And so they lived in anger and isolation, and the world would be better just like that.\
                                 World End. Restart?\
-                                ");//BABBA End
+                                ", "story");//BABBA End
                             }
                             else if(choiceb)//
                             {
@@ -417,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 for not being there when you died. The anger and guilt in them left, leaving and enhancing only the sadness \
                                 and melancholy. With this, Vesper chose to stay in the village, living peacefully until the day they died. \
                                 World End. Restart?\
-                            ");//BABBB End
+                            ", "story");//BABBB End
                             }
                         }
                     }
@@ -427,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     add("Vesper turned around not sparing any emotions and reorganizing their thoughts. It didn\’t happen. \
                     It didn\’t happen... What happened? And thus, Vesper proceeded along with the rest of the day, refusing to go \
                     outside. Near the evening Vesper heard a knock on the front door. Opening it they discovered two villagers asking \
-                    if Vesper could join the funeral they were going to hold tomorrow. ");//BB
+                    if Vesper could join the funeral they were going to hold tomorrow. ", "story");//BB
                     if(choicea)//
                     {
                         add("\“For who?\” Vesper asks. The other villagers\' expressions changed considerably, first \
@@ -436,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             coming outside occasionally to buy food. After a decade passed Vesper found a box with a note inside \
                             it but that’s another time. \
                         World End. Restart?\
-                        ");//BBA End
+                        ", "story");//BBA End
                     }
                     else if(choiceb)//
                     {
@@ -446,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             Ah right that\’s the word, isn\’t it? Reminisce… And with that Vesper dropped to their knees, tears welling out uncontrollably,\
                             and released the saddest sob one could ever hear…\
                         A month later Vesper stood behind the front door.\
-                        ");//BBB
+                        ", "story");//BBB
                         if(choicea)//
                         {
                             add("Vesper proceeded to reach for the handle… and open the door once more. The day after their \
@@ -454,13 +475,13 @@ document.addEventListener("DOMContentLoaded", function() {
                             paid their due respect and went back home to recover. Some villagers left some consolation gifts at the \
                             door, which were mostly food, but showed their support for the now truly lonely Vesper. The villagers\
                                 welcomed Vesper as they left the house, sparking a warm and friendly environment. \
-                            ");//BBBA End
+                            ", "story");//BBBA End
                         }
                         else if(choiceb)//
                         {
                             add("Vesper proceeded to reach for the handle… but hesitated. Maybe it was that hesitation that\
                                 broke down their courage and prevented them from going out for the following three weeks. Vesper continued \
-                                to live alone until their food supply was close to gone. They had to make a choice.");//BBBB
+                                to live alone until their food supply was close to gone. They had to make a choice.", "story");//BBBB
                             if(choicea)//
                             {
                                 add("Vesper decides to leave the village. The front door of the house was finally opened… \
@@ -468,7 +489,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     spot them. The villagers decided to leave the house as it was to avoid conflict, just in case Vesper\
                                     came back in the future. Which they later did but that’s another story.\
                                 World End. Restart?\
-                                ");//BBBBA End
+                                ", "story");//BBBBA End
                             }
                             else if(choiceb)//
                             {
@@ -480,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     their late father at all. And here they were, searching for any wealth he could’ve possible left behind. Vesper would \
                                     never notice the crystals in the box, because they proceeded to hang themselves that very day. \
                                 World End. Restart?\
-                                ");//BBBBB End
+                                ", "story");//BBBBB End
                             }
                         }
                     }
