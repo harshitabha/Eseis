@@ -19,67 +19,56 @@
 
  <body>
    
-    <!--NAV BAR-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container">
-        <a 
-          href="../index.html"
-          class="navbar-brand mb-0 h1">
+  <!--NAV BAR-->
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <!--new-->
+    <div id="mySidenav" class="sidenav">
+      
+      <li>
+        <a href="./index.html">Home</a>
+        <a href="./pages/storyf/story.html">Story</a>
+        <a href="./pages/sources.html">Sources</a>
+        <a href="./pages/aboutUs.html">About Us</a></li>
+    </div>
 
-          <!--Book Icon-->
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            class="d-inline-block align-top bi bi-book-half" 
-            width="30" height="30" 
-            fill="currentColor" 
-            viewBox="0 0 16 16"
-            id="bookIcon">
-            <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-          </svg>
 
-          <!--Website Name-->
-          Eseis
-        </a>
+    <div class="container" >
+      <a
+        href="./index.html"
+        class="navbar-brand mb-0 h1 home">
 
-        <!--Collapse button and the buttons that will be collapsed-->
-        <button 
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          class="navbar-toggler"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle Navigation">
+        
+        <!--Book Icon-->
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          class="d-inline-block align-top bi bi-book-half" 
+          width="50" height="50" 
+          fill="currentColor" 
+          viewBox="0 0 16 16"
+          id="bookIcon">
+          <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+        </svg>
 
-          <span class="navbar-toggler-icon"></span> <!--Icon for the button-->
+        <!--Website Name-->
+        Eseis
+      </a>
+      <div>
+        <button id="menubutton" onclick="menu()"; class = "navbar-toggler-icon">
         </button>
-        <div 
-          class="collapse navbar-collapse"
-          id="navbarNav">
-
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href = "../index.html" class="nav-link">
-                Home
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href = "../pages/lore.html" class="nav-link">
-                Lore
-              </a>
-            </li>
-
-            <li class="nav-item active">
-              <a href = "../pages/aboutUs.html" class="nav-link active">
-                About Us
-              </a>
-            </li>
-
-          </ul>
-        </div>
       </div>
-    </nav>
+      <!--Collapse button and the buttons that will be collapsed-->
+      <button 
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        class="navbar-toggler"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle Navigation">
+
+      </button>
+    </div>
+  </nav>
     
     <div class="card container border-0 harshita" style="width: 100%">
       <img class="card-img rounded-circle harshita" src="../images/websiteH.jpg" alt="Harshita Bhardwaj Picture">

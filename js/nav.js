@@ -15,11 +15,6 @@ function closeNav() {
     a = true;
   }
 function menu() {
-  if(a){
-    openNav();
-
-  }
-  else{
-    closeNav();
-  }
+  if(a){ openNav();}
+  else{ closeNav(); }
 }
