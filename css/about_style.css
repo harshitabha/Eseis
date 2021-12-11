@@ -8,14 +8,15 @@
 /* Large devices (desktops, 992px and up) 
  * Default
  */
-@media (min-width: 992px) { 
+/* @media (min-width: 992px) { 
   .card-text {font-size:2.5rem;} /*1rem = 16px*/
-}
+*/
 body {
   padding-top: 100px;
   
   /* font-family: 'Roboto', sans-serif; */
 }
+
 .card{
   flex-direction: row;
   align-items:center;
@@ -37,8 +38,7 @@ body {
 
 .card-title {
   font-size: 48px; /*From UI Material Design*/
-
-  /* making the title text a gradient color */
+  /* height:; */
   background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,21 +52,21 @@ body {
 
 /* sizes based on the size of the screen */
 /* Small devices (landscape phones, 544px and up) */
-@media (max-width: 544px) {  
+/* @media (max-width: 544px) {  
   .card-text {font-size:16px;} /*1rem = 16px*/
-  .card-title{font-size: 29px;}
+  /* .card-title{font-size: 29px;}
   .card-img {
     height: 150px;
     width: fit-content;
   }
 }
- 
+  */
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (max-width: 768px) {  
+/* @media (max-width: 768px) {  
   .card-text {font-size:18px;} /*1rem = 16px*/
-  .card-title{font-size: 40px;}
+  /* .card-title{font-size: 40px;}
   .card-img {
     height: 200px;
     width: fit-content;
-  }
-}
+  } */
+/* } */
