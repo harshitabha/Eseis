@@ -20,7 +20,10 @@
  <body id="main">
    
    <!--NAV BAR-->
-   <nav class="navbar navbar-expand-sm navbar-dark">
+   <!--The style tag is to make the bg color of the nav bar on the home page match the color of the gradient-->
+   <nav
+    style="background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));"
+    class="navbar navbar-expand-sm navbar-dark">
      <!--new-->
      <div id="mySidenav" class="sidenav">
        
@@ -77,22 +80,11 @@
 
 
    <div class="gradientCont mainCont">
+
      <div class="mainCont">
        <h2 class="welcome">Welcome to Eseis...</h2>
-       <h3 class="welcome">Get Started By Typing <em>'START'</em> Below</h3>
+       <h3 class="welcome">Dive into your adventure</h3>
      </div>
-     
-     
-     <div class="container terminalCont">
-         <div id="terminalResultsCont">
-         </div>
-
-         <form>
-           <input id="terminalTextInput" type="text" placeholder="Type 'HELP' if you are stuck..." autocomplete="off">
-         </form>
-     </div>
-     <div class="footer mt-5 p-3"></div> <!--Just a space (Maybe add an easter egg here)-->
-
 
    </div>
 
@@ -104,7 +96,6 @@
 
    <!--Our JS-->
    <script src="./js/script.js"></script>
-   <script src="./js/terminal.js"></script>
    <script src="./js/nav.js"></script>
 
 

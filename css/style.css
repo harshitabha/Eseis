@@ -36,7 +36,6 @@ nav div li a:hover {
   bottom: 0px;
 }
 
-/*hfjhaoiadhohewfkhsfahoh*/
 
 .sidenav {
   height: 100%;
@@ -50,9 +49,8 @@ nav div li a:hover {
   transition: 0.6s;
   padding-top: 60px;
 }
-.navbar {
-  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
-}
+
+
 .home {
   font-size: 36px;
 }
@@ -81,6 +79,7 @@ nav div li a:hover {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 #main {
   transition: margin-right .5s;
   
