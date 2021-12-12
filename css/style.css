@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /*notmal text font*/
 
 body{
-  /* width: 100%;
-  height: auto; */
-  
+  width: 100%;
+  height: auto; 
+  transition: background-color .5s;
   font-family: 'Roboto', sans-serif;
 }
 #bookIcon {
   margin-right: 5px;
+  margin-left:10px;
 }
 
 /*Mske the background of nav buttons change on hover*/
@@ -17,7 +18,10 @@ nav ul li a:hover {
   background-color: var(--main_purple) !important;
   color: white !important;
 }
-
+nav div li a:hover {
+  background-color: var(--main_purple) !important;
+  color: white !important;
+}
 .active {
   background-color: var(--main_blue) !important;
 }
@@ -30,4 +34,61 @@ nav ul li a:hover {
   position: relative;
   width: 100%;
   bottom: 0px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 60px;
+}
+
+
+.home {
+  font-size: 36px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#main {
+  transition: margin-right .5s;
+  
+}
+
+#menubutton{
+  padding: 16px;  
+  margin:10px;
+  size: 2vh;
+  border: transparent;
+  background-color: transparent;
 }
