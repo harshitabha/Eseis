@@ -1,0 +1,42 @@
+/* layout for story text */
+.text {
+    width: fit-content;
+    min-height: fit-content;
+    font-size: 26px;
+    text-align: center;
+    transition: linear;
+    transition-duration: 1.5s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.choiceButton {
+    width: 12vh;
+    height: fit-content;
+    background-color: aliceblue;
+    padding-top: 15px;
+    vertical-align: bottom;
+    ruby-align: center;
+}
+
+.choiceButton:hover{
+    background-color: rgb(235, 198, 255);
+    transition-duration: 0.5s;
+}
+/* box for text, buttons, imgs. */
+.area{
+    background-color: azure;
+    width: inherit;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.buttons {
+    text-align: center;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    vertical-align: bottom;
+
+}
+#prev {
+    text-align: right;
+    margin: 10px;
+} 
