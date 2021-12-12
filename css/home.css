@@ -13,15 +13,19 @@ body {
   *,* before, *:after {
     box-sizing: inherit;
   }
-  
+
+#bookIcon{
+  fill: white;
+}
+
 /* create the gradient for the background*/
 .gradientCont{
   background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 
-.mainCont h2{
+.welcome h2{
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -34,16 +38,6 @@ body {
   animation: fadeAnimation 1s ease-in-out 0s forwards;
 }
 
-.mainCont h3{
-  text-align: center;
-  font-weight: 100%;
-  font-size: 34px;
-  font-family: 'Charm', cursive;
-  color: rgb(255, 255, 255, 0.75);
-  margin: 0 0 60px 0;
-  opacity: 0;
-  animation: fadeAnimation 1s ease-in-out 0.5s forwards;
-}
 
 
 /* creating the animations for the text when the webpage loads */
@@ -87,18 +81,18 @@ body {
   .gradientCont{
     height: 220px;
   }
-  .mainCont{
-    width: 100%;
-    padding: 0 12 px;
+
+  .mainCont h2{ transform: scale(0.85); }
+}
+
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 500px){
+  .gradientCont{
+    height: 200px;
   }
 
-  .mainCont h2{
-    font-size: 32px;
-    margin: 40px 0 0 0;
-  }
-
-  .mainCont h3{
-    font-size: 16px;
-    margin: 0 0 40px 0;
+  .mainCont h2{ 
+    transform: scale(0.55); 
+    margin: 0px;
   }
 }

@@ -4,30 +4,23 @@
 
 body{
   transition: background-color .5s;
-  /* width: 100%;
-  height: auto;  */
   font-family: 'Roboto', sans-serif;
 }
 #bookIcon {
   margin-right: 5px;
   margin-left:10px;
+  /* color: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon)); */
 }
 
+/* .navbar {
+  /* making the font color the gradient 
+  background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
 /*Mske the background of nav buttons change on hover*/
-nav ul li a:hover {
-  background-color: var(--main_purple) !important;
-  color: white !important;
-}
-nav div li a:hover {
-  background-color: var(--main_purple) !important;
-  color: white !important;
-}
-.active {
-  background-color: var(--main_blue) !important;
-}
-.active:hover {
-  background-color: var(--main_blue) !important;
-}
+
 
 .footer {
   height: auto;
@@ -59,12 +52,16 @@ nav div li a:hover {
   text-decoration: none;
   font-size: 25px;
   color:black;
+  font-weight: 700;
   display: block;
   transition: 0.4s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  /* color: #f1f1f1; */
+  background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sidenav .closebtn {
@@ -80,15 +77,35 @@ nav div li a:hover {
   .sidenav a {font-size: 18px;}
 }
 
-#main {
-  transition: margin-right .5s;
-  
-}
-
 #menubutton{
   padding: 16px;  
   margin:10px;
   size: 2vh;
   border: transparent;
   background-color: transparent;
+}
+
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 1000px){
+  .home {
+    /* font-size:  */
+    transform: scale(0.85);
+  }
+  .home svg {transform: scale(0.85); /*85% of original size*/
+  }
+  #menubutton {
+    transform: scale(0.85)
+  }
+}
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 500px){
+  .home {
+    /* font-size:  */
+    transform: scale(0.65);
+  }
+  .home svg {transform: scale(0.75); /*85% of original size*/
+  }
+  #menubutton {
+    transform: scale(0.7)
+  }
 }

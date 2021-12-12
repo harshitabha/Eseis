@@ -38,10 +38,12 @@ body {
 
 .card-title {
   font-size: 48px; /*From UI Material Design*/
-  /* height:; */
+
+  /* making the font color the gradient */
   background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
   padding-bottom: 15px;
   font-family: 'Charm', cursive;
 }
