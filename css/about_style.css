@@ -43,9 +43,13 @@ body {
   background: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   padding-bottom: 15px;
   font-family: 'Charm', cursive;
+}
+
+#topCard {
+  margin-top: 50px;
 }
 
 .card-text {

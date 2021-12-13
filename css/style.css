@@ -29,6 +29,9 @@ body{
   bottom: 0px;
 }
 
+.navbar{
+  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
+}
 
 .sidenav {
   height: 100%;

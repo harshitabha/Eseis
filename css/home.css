@@ -38,6 +38,11 @@ body {
   animation: fadeAnimation 1s ease-in-out 0s forwards;
 }
 
+/* fixing the orientation of the book that the person is jjumping into */
+#jumpBook {
+  /* height: 200px; */
+  transform: rotate(30deg);
+}
 
 
 /* creating the animations for the text when the webpage loads */
