@@ -4,17 +4,25 @@
     min-height: fit-content;
     font-size: 26px;
     text-align: center;
+    line-height: 60px;
     transition: linear;
     transition-duration: 1.5s;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.indent {
+    text-indent: 20px;
+}
+/* button properties */
 .choiceButton {
-    width: 12vh;
+    width: 15vh;
     height: fit-content;
     background-color: aliceblue;
-    padding-top: 15px;
+    padding: 15px;
+    margin-left:8vh;
+    margin-right:8vh;
     vertical-align: bottom;
     ruby-align: center;
+    
 }
 
 .choiceButton:hover{
@@ -27,16 +35,41 @@
     width: inherit;
     padding-left: 10vh;
     padding-right: 10vh;
-}
+    padding-bottom: 20px;
     
+}
+/* organizes buttons */
 .buttons {
     text-align: center;
-    margin-left: 15vh;
-    margin-right: 15vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
     vertical-align: bottom;
-
+    text-decoration:none;
 }
+/* removes blue textcolor on links */
+/* https://stackoverflow.com/questions/10143357/how-to-make-these-buttons-not-appear-as-blue-links */
+ a.unlink:link {
+    text-decoration: none;
+    color: black;
+}
+a.unlink:visited {
+    text-decoration: none;
+    color: black;
+}
+a.unlink:active {
+    text-decoration: none;
+} 
+/* back button */
 #prev {
     text-align: right;
     margin: 10px;
 } 
+/* title resizing */
+.title {
+vertical-align: top;
+font-size: 30px;
+}
+
+.titleIcon{
+    font-size: 10px;
+}
