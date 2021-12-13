@@ -3,17 +3,41 @@
 
 .card{
   transition: ease-in-out .5s ;
-  margin-left: 2rem;
+  margin: 2rem;
   padding: 1em;
 }
 .card:hover{
   background-color: var(--card-hover);
   transform: scale(1.05);
 }
+
+/* to change the card to the animated version on hover */
+.card:hover #aniC{
+  display: inline;
+}
+.card:hover #staticC{
+  display: none;
+}
+/* to change the card to the animated version on hover */
+.card:hover #aniS{
+  display: inline;
+}
+.card:hover #staticS{
+  display: none;
+}
+
+/* hide the animated version unitl the card is hovered on */
+#aniC {
+  display: none;
+}
+#aniS {
+  display: none;
+}
   
 .card-img{
   height: 100px;
   width: fit-content;
+  align-items: center;
 }
 
 .btn {
