@@ -37,11 +37,49 @@ body {
   opacity: 0;
   animation: fadeAnimation 1s ease-in-out 0s forwards;
 }
-
+.intro {
+  padding-bottom: 5em;
+}
 /* fixing the orientation of the book that the person is jjumping into */
 #jumpBook {
-  /* height: 200px; */
-  transform: rotate(30deg);
+  height: 150px;
+  transform: rotate(30deg) translate(-100px, 70px);
+  display: inline-block;
+  margin-top: 150px;
+  position: absolute;
+}
+
+#jump:hover #jumpPerson {
+  transform: translate(-50px, 10px) scale(0.6);
+}
+
+#jumpPerson {
+  height: 200px;
+  transform: translate(150px, -80px);
+  transition: ease-in-out 1.5s;
+  margin-top: 6em;
+}
+
+#selectAni {
+  display: none;
+  height: 100px;
+}
+#selection:hover #selectAni {
+  display: inline;
+}
+#selection:hover #select {
+  display: none;
+}
+
+#searchAni {
+  display: none;
+  height: 100px;
+}
+#look:hover #searchAni {
+  display: inline;
+}
+#look:hover #search {
+  display: none;
 }
 
 

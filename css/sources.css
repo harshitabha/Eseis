@@ -1,0 +1,30 @@
+/* import the main colors being used */
+@import url(./colors.css);
+
+.card{
+  transition: ease-in-out .5s ;
+  margin-left: 2rem;
+  padding: 1em;
+}
+.card:hover{
+  background-color: var(--card-hover);
+  transform: scale(1.05);
+}
+  
+.card-img{
+  height: 100px;
+  width: fit-content;
+}
+
+.btn {
+  /* change the bg color of a button to match our main gradient */
+  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
+  color: white; /*text color*/
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn:hover {
+  color: white !important;
+  background-position: right center; /* change the direction of the change here */
+}
