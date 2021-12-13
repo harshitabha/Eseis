@@ -47,7 +47,7 @@ nav div li a:hover {
   right: 0;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
-  transition: 0.6s;
+  transition: 0.5s;
   padding-top: 60px;
 }
 .navbar {
@@ -62,7 +62,7 @@ nav div li a:hover {
   font-size: 25px;
   color:black;
   display: block;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .sidenav a:hover {
@@ -82,7 +82,7 @@ nav div li a:hover {
   .sidenav a {font-size: 18px;}
 }
 #main {
-  transition: margin-right .5s;
+  transition: margin-left .5s;
   
 }
 
