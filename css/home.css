@@ -38,7 +38,16 @@ body {
   animation: fadeAnimation 1s ease-in-out 0s forwards;
 }
 .intro {
-  padding-bottom: 5em;
+  /* padding-bottom: 5em; */
+  font-size: 25px;
+}
+#jump .intro {
+  margin-top: 50%;
+  font-size: 25px;
+  /* padding-bottom: 3em; */
+}
+hr {
+  margin-top: 7em;
 }
 /* fixing the orientation of the book that the person is jjumping into */
 #jumpBook {
@@ -63,13 +72,15 @@ body {
 
 #hotAirBalloon {
   height: 20em;
-  transform: rotate(20deg);
+  transform: rotate(20deg) ;
+  /* margin-top: 50%; */
+  /* margin-bottom: 25%; */
   transition: all ease-out 2s;
 }
 #journey:hover #hotAirBalloon {
   height: 20em;
-  transform: rotate(15deg) translate(3em, -6em);
-  opacity: 0.4;
+  transform: rotate(5deg) translate(3em, -8em);
+  opacity: 0.6;
 }
 #selectAni {
   display: none;
@@ -95,27 +106,23 @@ body {
 
 .row {
   margin-top: 2em;
-  background-color: aqua;
+  /* background-color: aqua; */
+  justify-content: center;
+  /* padding-top:25%; */
+  /* padding-bottom: 50%; */
 }
 
 .col {
   /* background-color: antiquewhite; */
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   border: 1em;
   border-color: black;
+  justify-content: center;
   
   /* font-size: 62px; */
 }
 
-.col .intro {
-  height: fit-content;
-  justify-content: center;
-  align-items: center;
-  font-size: 60px;
-  margin-top: 50%;
-  margin-bottom: 50%;
-  background-color: antiquewhite;
-}
+
 
 /* creating the animations for the text when the webpage loads */
 @-webkit-keyframes fadeAnimation {
