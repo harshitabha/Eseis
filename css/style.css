@@ -42,10 +42,12 @@ body{
   right: 0;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
-  transition: 0.6s;
+  transition: all .5s;
   padding-top: 60px;
 }
-
+#main {
+  transition: all .5s;
+}
 
 .home {
   font-size: 36px;
