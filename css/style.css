@@ -87,6 +87,9 @@ body{
   border: transparent;
   background-color: transparent;
 }
+#main {
+  transition: .5s;
+}
 
 /* changing the side of the text and other values when the width of the screen is a certian value */
 @media screen and (max-width: 1000px){
