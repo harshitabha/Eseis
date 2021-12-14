@@ -1,0 +1,1 @@
+var tl = new TimeLineMax({onUpdate: updatePercentage})

@@ -1,0 +1,234 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
+
+/*other imports*/
+@import url(./colors.css);
+
+/*CSS for the main body of the website specfically anything relating to the terminal**/
+/* 1 rem/em = 16px */
+body {
+    box-sizing:border-box;
+  }
+  
+  *,* before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/* create the gradient for the background*/
+.gradientCont{
+  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
+  width: 100%;
+  height: 250px;
+}
+
+.welcome h2{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Charm', cursive;
+  font-size: 70px;
+  margin: 60px 0 0;
+  color: white;
+  opacity: 0;
+  animation: fadeAnimation 1s ease-in-out 0s forwards;
+}
+.intro {
+  /* padding-bottom: 5em; */
+  font-size: 25px;
+}
+#jump .intro {
+  margin-top: 50%;
+  font-size: 25px;
+  /* padding-bottom: 3em; */
+}
+hr {
+  margin-top: 7em;
+}
+/* fixing the orientation of the book that the person is jjumping into */
+#jumpBook {
+  height: 18em;
+  /* padding-right: 20em; */
+  transform: translate(-9em, 7em);
+  display: inline-block;
+  /* margin-top: 150px; */
+  position: absolute;
+}
+
+#jump:hover #jumpPerson {
+  transform: rotate(-5deg) translate(-50px, 10px) scale(0.7);
+}
+
+#jumpPerson {
+  height: 200px;
+  transform: translate(150px, -80px);
+  transition: ease-in-out 1.5s;
+  margin-top: 6em;
+}
+
+#hotAirBalloon {
+  height: 20em;
+  transform: rotate(20deg) ;
+  /* margin-top: 50%; */
+  /* margin-bottom: 25%; */
+  transition: all ease-out 2s;
+}
+#journey:hover #hotAirBalloon {
+  height: 20em;
+  transform: rotate(5deg) translate(3em, -8em);
+  opacity: 0.6;
+}
+#selectAni {
+  display: none;
+  height: 100px;
+}
+#selection:hover #selectAni {
+  display: inline;
+}
+#selection:hover #select {
+  display: none;
+}
+
+#searchAni {
+  display: none;
+  height: 100px;
+}
+#look:hover #searchAni {
+  display: inline;
+}
+#look:hover #search {
+  display: none;
+}
+
+.row {
+  margin-top: 2em;
+  /* background-color: aqua; */
+  justify-content: center;
+  /* padding-top:25%; */
+  /* padding-bottom: 50%; */
+}
+
+.col {
+  /* background-color: antiquewhite; */
+  /* background-color: aquamarine; */
+  border: 1em;
+  border-color: black;
+  justify-content: center;
+  
+  /* font-size: 62px; */
+}
+
+
+
+/* creating the animations for the text when the webpage loads */
+@-webkit-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fadeAnimation {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1;}
+}
+
+@keyframes slideAnimation {
+  0% {opacity:20px;}
+  100% {opacity:1;}
+}
+
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 970px){
+  #jumpPerson {
+    height: 200px;
+    transform: translate(70px, -80px) scale(.85);
+    transition: ease-in-out 1.5s;
+    margin-top: 6em;
+  }
+  
+  #jump:hover #jumpPerson {
+    transform: translate(-60px, 10px) scale(0.5);
+  }
+  #jumpBook {
+    height: 150px;
+    transform: translate(-90px, 80px) scale(.85);
+    display: inline-block;
+    margin-top: 150px;
+    position: absolute;
+  }
+}
+
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 700px){
+  .gradientCont{
+    height: 220px;
+  }
+  .mainCont h2{ transform: scale(0.85); }
+  #jumpPerson {
+    height: 200px;
+    transform: translate(80px, -80px) scale(.75);
+    transition: ease-in-out 1.5s;
+    margin-top: 6em;
+  }
+  
+  #jump:hover #jumpPerson {
+    transform: translate(-40px, 10px) scale(0.5);
+  }
+  #jumpBook {
+    height: 150px;
+    transform: translate(-100px, 50px) scale(.65);
+    display: inline-block;
+    margin-top: 150px;
+    position: absolute;
+  }
+}
+
+/* changing the side of the text and other values when the width of the screen is a certian value */
+@media screen and (max-width: 570px){
+  .gradientCont{
+    height: 200px;
+  }
+
+  .mainCont h2{ 
+    transform: scale(0.55); 
+    margin: 0px;
+  }
+
+  #jumpPerson {
+    height: 200px;
+    transform: scale(.65) translate(90px, -150px) ;
+    transition: ease-in-out 1.5s;
+    margin-top: 6em;
+  }
+  
+  #jump:hover #jumpPerson {
+    transform: translate(-30px, -15px) scale(0.4);
+  }
+  #jumpBook {
+    height: 150px;
+    transform: translate(-90px, 20px) scale(.5);
+    display: inline-block;
+    margin-top: 150px;
+    position: absolute;
+  }
+}

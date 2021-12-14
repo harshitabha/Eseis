@@ -1,0 +1,55 @@
+/* import the main colors being used */
+@import url(./colors.css);
+
+.card{
+  transition: ease-in-out .5s ;
+  margin: 2rem;
+  padding: 1em;
+}
+.card:hover{
+  background-color: var(--card-hover);
+  transform: scale(1.05);
+}
+
+/* to change the card to the animated version on hover */
+.card:hover #aniC{
+  display: inline;
+}
+.card:hover #staticC{
+  display: none;
+}
+/* to change the card to the animated version on hover */
+.card:hover #aniS{
+  display: inline;
+}
+.card:hover #staticS{
+  display: none;
+}
+
+/* hide the animated version unitl the card is hovered on */
+#aniC {
+  display: none;
+}
+#aniS {
+  display: none;
+}
+  
+.card-img{
+  height: 100px;
+  width: fit-content;
+  align-items: center;
+}
+
+.btn {
+  /* change the bg color of a button to match our main gradient */
+  background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
+  color: white; /*text color*/
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 8px;
+}
+.btn:hover {
+  color: white !important;
+  background-position: right center; /* change the direction of the change here */
+}

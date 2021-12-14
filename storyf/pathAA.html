@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+    <title>Eseis</title>
+    <meta name="keywords" content="choose your own adventure, story, hidden secrets, mystery"> <!--the keywords the search engine looks for when a person searches something-->
+  <meta charset="UTF-8">
+  <meta name="description" content="Follow Vesper as they discover the mystery behind their mother">
+  <meta name="author" content="Harshita Bhardwaj and Gerald Kyro Tungol"> <!--Author(s) of the website-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+
+   <!--Our CSS-->
+   <link href="../css/story.css" rel="stylesheet" type="text/css" />
+   <link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+ </head>
+
+ <body id="main">
+   
+    <!--NAV BAR-->
+    <nav
+      class="navbar navbar-expand-sm navbar-dark">
+      <!--new-->
+      <div id="mySidenav" class="sidenav">
+        
+        <li>
+          <a href="../index.html">Home</a>
+          <a href="../storyf/story.html">Story</a>
+          <a href="../pages/sources.html">Sources</a>
+          <a href="../pages/aboutUs.html">About Us</a></li>
+      </div>
+
+
+      <div class="container" >
+        <a
+          href="../index.html"
+          class="navbar-brand mb-0 h1 home">
+          
+          <!--Book Icon-->
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="d-inline-block align-top bi bi-book-half" 
+            width="50" height="50" 
+            fill="currentColor" 
+            viewBox="0 0 16 16"
+            id="bookIcon">
+            <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg>
+          <!--Website Name-->
+          Eseis
+        </a>
+        <div>
+          <button id="menubutton" onclick="menu()"; class = "navbar-toggler-icon">
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Story Layour -->
+    <div class="container">
+      <div class="area">
+        <a class="unlink btn btn-default mb-5 mt-5" href="../pathA.html">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+          width="30" height="30" 
+          fill="currentColor" 
+          class="bi bi-arrow-left" 
+          viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </a>
+
+        <!-- story -->
+        <p class = "text">
+          Vesper stays back and waits. <em>It shouldn’t be father, he’s been out for 3 weeks already. He would have sent a notice back.</em> And thus, Vesper proceeded
+          along with the rest of the day, refusing to go outside in case of danger. Near the evening Vesper heard a knock on the front door. Opening it they discovered
+          two villagers asking if Vesper could join the funeral they were going to hold tomorrow.
+        </p>
+
+        <!-- choices -->
+        <div class="buttons">
+          <a class="unlink btn choice a" href="./pathAAA.html">
+            For who?
+          </a>
+
+          <a class="unlink btn choice b" href="./pathAAB.html">
+            No
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer mt-5 p-3"></div> <!--Just a spacer-->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <!-- for the back button
+    https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_glyph_arrow-left&stacked=h
+   -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Our JS-->
+    <script src="../js/script.js"></script>
+    <script src="../js/nav.js"></script>
+
+  </body>
+</html>
+   
