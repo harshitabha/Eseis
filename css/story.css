@@ -19,42 +19,65 @@
 }
 
 .choice {
-    /* change the bg color of a button to match our main gradient */
-    /* background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon)); */
-    color: white; /*text color*/
-    transition: 0.5s;
-    border: none;
-    text-transform: uppercase;
-    margin: 1em;
-    font-size: 25px;
-    /* font-weight: 700; */
-    color: white !important;
-  }
-  
-  .a{ background-color: var(--main_purple);}
-  .a:hover {
-    background-color: var(--Dpurple) !important;
-  }
+  /* change the bg color of a button to match our main gradient */
+  /* background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon)); */
+  color: white; /*text color*/
+  transition: 0.5s;
+  border: none;
+  text-transform: uppercase;
+  margin: 1em;
+  font-size: 25px;
+  /* font-weight: 700; */
+  color: white !important;
+}
 
-  .b { background-color: var(--main_salmon);}
-  .b:hover {
-    background-color: var(--Dsalmon) !important;
-  }
+.a{ background-color: var(--main_purple);}
+.a:hover {
+  background-color: var(--Dpurple) !important;
+}
 
-  .re { background-color: var(--main_blue);}
-  .re:hover {
-    background-color: var(--Dblue) !important;
-  }
+.b { background-color: var(--main_salmon);}
+.b:hover {
+  background-color: var(--Dsalmon) !important;
+}
 
-  .end{
-    font-weight: 600;
-    font-size: 40px;
-    color: black;
-  }
+.re { background-color: var(--main_blue);}
+.re:hover {
+  background-color: var(--Dblue) !important;
+}
 
-  /* .back {
-    height: 6em;
-  } */
-  #backBtn {
+.end{
+  font-weight: 600;
+  font-size: 40px;
+  color: black;
+}
 
-  }
+
+  /* layout for story text */
+.text {
+  width: fit-content;
+  min-height: fit-content;
+  font-size: 26px;
+  text-align: center;
+  line-height: 60px;
+  transition: linear;
+  transition-duration: 1.5s;
+}
+
+/* box for text, buttons, imgs. */
+.area{
+  background-color: azure;
+  width: inherit;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+/* organizes buttons */
+.buttons {
+  text-align: center;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  vertical-align: bottom;
+  text-decoration:none;
+}
