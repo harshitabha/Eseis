@@ -40,3 +40,21 @@
   .b:hover {
     background-color: var(--Dsalmon) !important;
   }
+
+  .re { background-color: var(--main_blue);}
+  .re:hover {
+    background-color: var(--Dblue) !important;
+  }
+
+  .end{
+    font-weight: 600;
+    font-size: 40px;
+    color: black;
+  }
+
+  /* .back {
+    height: 6em;
+  } */
+  #backBtn {
+
+  }
