@@ -14,7 +14,6 @@
 
    <!--Our CSS-->
    <link href="../css/story.css" rel="stylesheet" type="text/css" />
-   <link href="../css/terminal.css" rel="stylesheet" type="text/css" />
    <link href="../css/style.css" rel="stylesheet" type="text/css" />
 
  </head>
@@ -77,45 +76,42 @@
     <div class="container">
       <div class="area">
         <!-- goes to previous page -->
-        <a class="unlink" href="./pathBABB.html">
-        <button id=prev type="button" class="btn btn-default btn-smx`">
-          <span class="glyphicon glyphicon-arrow-left"></span>
-        </button>
+        <a class="unlink btn btn-default mb-5 mt-5" href="./pathBABB.html">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+          width="30" height="30" 
+          fill="currentColor" 
+          class="bi bi-arrow-left" 
+          viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
         </a>
         <!-- text area -->
-        <div class="footer mt-1 p-3"></div> <!--Just a space (Maybe add an easter egg here)-->
-
-        <p class = "text">
+        <!-- story -->
+        <p class = "text mt-5">
           Peering through the hole, Vesper saw that in the other room, somewhat displaced, a broken box lay at the center. They 
           ran out of the room and in front of the door to the room next to it. It was their father’s office room. Vesper felt a sad 
-          nostalgia as they entered the room. Vesper looked at the box in the middle. There was a note on it. It read, “I am dead… I know. 
+          nostalgia as they entered the room. Vesper looked at the box in the middle. There was a note on it. It read, <em> “I am dead… I know. 
           Sorry for leaving you alone. I was very happy raising you, you meant more to me than this world. You must be angry at the world 
           or at me for leaving you. There may not be anything I can say to relieve that. I would only wish that you someday are able to let 
-          this become your strength.  nIf everything has happened as predicted, then there is nothing holding you back. You can choose to stay 
+          this become your strength. If everything has happened as predicted, then there is nothing holding you back. You can choose to stay 
           here if you wish, or you can choose to go into the world and find your purpose. And finally, know that you are never alone, for your 
-          mother is still somewhere in this world, and that I am with you in spirit. Signed, Caland Milcloud”//BABB
+          mother is still somewhere in this world, and that I am with you in spirit. Signed, Caland Milcloud” </em>
         </p>
-        <!-- images then butons -->
-          <img src="" alt="">
-          <img src="" alt="">
+        
+        <!-- choices -->
         <div class="buttons">
-          <a class="unlink"href="./pathBABBA.html">
-            <button class="choiceButton" >
-              Crumple the Paper
-            </button>
+          <a class="unlink btn choice a" href="./pathBABBA.html">
+            Crumple the Paper
           </a>
 
-          <a class="unlink"href="./pathBABBB.html">
-            <button class="choiceButton" >
-              Fold and Fire
-            </button>
+          <a class="unlink btn choice b" href="./pathBABBB.html">
+            Fold and Fire
           </a>
         </div>
       </div>
     </div>
 
-
-
+    <div class="footer mt-5 p-3"></div> <!--Just a spacer-->
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -128,7 +124,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <!--Our JS-->
     <script src="../js/script.js"></script>
-    <script src="./js/terminal.js"></script>
     <script src="../js/nav.js"></script>
 
   </body>
