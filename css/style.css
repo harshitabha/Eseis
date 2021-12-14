@@ -1,10 +1,11 @@
 @import url(./colors.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /*notmal text font*/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600&display=swap');
 
 body{
   transition: background-color .5s;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 500;
 }
 #bookIcon {
   margin-right: 5px;
