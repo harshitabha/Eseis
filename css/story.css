@@ -1,0 +1,26 @@
+.text {
+    font-size: 30px;
+}
+
+.choice {
+    /* change the bg color of a button to match our main gradient */
+    /* background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon)); */
+    color: white; /*text color*/
+    transition: 0.5s;
+    border: none;
+    text-transform: uppercase;
+    margin: 1em;
+    font-size: 25px;
+    /* font-weight: 700; */
+    color: white !important;
+  }
+  
+  .a{ background-color: var(--main_purple);}
+  .a:hover {
+    background-color: var(--Dpurple) !important;
+  }
+
+  .b { background-color: var(--main_salmon);}
+  .b:hover {
+    background-color: var(--Dsalmon) !important;
+  }

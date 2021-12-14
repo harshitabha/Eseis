@@ -14,9 +14,6 @@ body {
     box-sizing: inherit;
   }
 
-#bookIcon{
-  fill: white;
-}
 
 /* create the gradient for the background*/
 .gradientCont{

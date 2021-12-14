@@ -9,7 +9,7 @@ body{
 }
 #bookIcon {
   margin-right: 5px;
-  margin-left:10px;
+  margin-left: 10px;
   /* color: -webkit-linear-gradient(var(--main_blue), var(--main_purple), var(--main_salmon)); */
 }
 
@@ -30,6 +30,7 @@ body{
   bottom: 0px;
 }
 
+/* make the nav bar gradient */
 .navbar{
   background-image: linear-gradient(to right, var(--main_blue), var(--main_purple),  var(--main_salmon));
 }
@@ -77,6 +78,11 @@ body{
   font-size: 36px;
   margin-right: 50px;
 }
+
+.btn {
+  box-shadow: 3px 3px 5px var(--shadow);
+}
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
