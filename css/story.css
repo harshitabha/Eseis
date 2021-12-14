@@ -36,7 +36,7 @@
     padding-left: 10vh;
     padding-right: 10vh;
     padding-bottom: 20px;
-    
+    margin-top: 30px;
 }
 /* organizes buttons */
 .buttons {
@@ -64,12 +64,3 @@ a.unlink:active {
     text-align: right;
     margin: 10px;
 } 
-/* title resizing */
-.title {
-vertical-align: top;
-font-size: 30px;
-}
-
-.titleIcon{
-    font-size: 10px;
-}
